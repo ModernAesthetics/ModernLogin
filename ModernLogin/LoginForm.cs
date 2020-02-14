@@ -34,8 +34,16 @@ namespace ModernLogin
 
             if (loginResult == 1)
             {
-                RegisterUserForm af = new RegisterUserForm();
-                af.Show();
+                if (Application.OpenForms.OfType<RegisterUserForm>().Count() ==1)
+                {
+                    Application.OpenForms.OfType<RegisterUserForm>().First().BringToFront();
+                }
+                else
+                {
+                    RegisterUserForm af = new RegisterUserForm();
+                    af.Show();
+                }
+
             }
             else
             {
