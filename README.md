@@ -5,7 +5,7 @@ Simple C# Login Form and User Registration Form using MSSQL.
 ![alt text](https://i.imgur.com/l84VhHJ.png "Add User Form")
 
 # MSSQL Procedure
-'''
+```
 USE [testDB]
 GO
 /****** Object:  StoredProcedure [dbo].[usp_Login]    Script Date: 2/14/2020 10:32:28 AM ******/
@@ -25,7 +25,7 @@ from dbo.Users
 where email = @email
 and password = hashbytes('sha2_512', @password + cast(salt as nvarchar(36)))
 end
-'''
+```
 
 # ToDo
 * Finish Add User procedure so "USER REGISTRATION" form works.
