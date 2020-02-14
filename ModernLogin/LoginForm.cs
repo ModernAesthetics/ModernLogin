@@ -34,7 +34,7 @@ namespace ModernLogin
 
             if (loginResult == 1)
             {
-                if (Application.OpenForms.OfType<RegisterUserForm>().Count() ==1)
+                if (Application.OpenForms.OfType<RegisterUserForm>().Count() >=1)
                 {
                     Application.OpenForms.OfType<RegisterUserForm>().First().BringToFront();
                 }
