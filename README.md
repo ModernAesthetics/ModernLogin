@@ -1,31 +1,13 @@
 # ModernLogin
 Simple C# Login Form and User Registration Form using MSSQL.
+Plan is to expand it and improve.
 
 ![alt text](https://i.imgur.com/YCZlaTZ.png "Login Form")
 ![alt text](https://i.imgur.com/l84VhHJ.png "Add User Form")
 
-# MSSQL Procedure
-```
-USE [testDB]
-GO
-/****** Object:  StoredProcedure [dbo].[usp_Login]    Script Date: 2/14/2020 10:32:28 AM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-ALTER proc [dbo].[usp_Login] (
-@email varchar(50)
-, @password varchar(100)
-)
-as
-begin
---select the number of users that match the inputted email and password
-select count(*) 
-from dbo.Users
-where email = @email
-and password = hashbytes('sha2_512', @password + cast(salt as nvarchar(36)))
-end
-```
+# Credits
+[w00tabega](https://www.youtube.com/channel/UCrqah6-KF_ollOmq-dg-CGQ) for YouTube tutorial on this.
+
 
 # ToDo
 * Finish Add User procedure so "USER REGISTRATION" form works.
