@@ -9,3 +9,4 @@ Simple C# Login Form and User Registration Form using MSSQL.
 * Handle Multiple "USER REGISTRATION" forms
 * Create Admin and User "Groups"
 * Change login button function to be smart about user login "group"
+* Possibly change MSSQL to MySQL or MariaDB
